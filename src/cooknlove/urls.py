@@ -17,10 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from homepage.views import index
-from myopenai.views import aiResponse
+from myopenai.views import generate_response
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
-    path('', aiResponse, name = "aiResponse")
+    path('', generate_response, name = "generate_response" )
 ]
