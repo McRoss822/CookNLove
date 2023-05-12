@@ -6,29 +6,24 @@
 </head>
 <body>
 <h1>Vidpovid</h1>
-{% block content %}
     <div class="hstack gap-3 container my-4">
+
         <form method="post">
             {% csrf_token %}
             <input class="form-control me-auto color_s" type="text" name="user_input" placeholder="Пошук інградієнтів">
             <button type="submit" class="btn btn-secondary">Пошук</button>
-            <div class="vr"></div>
-            <button type="button" class="btn btn-outline-danger">Скинути</button>
         </form>
 
-    </div>
-
-    <!--Кінець "Пошук"-->
-
-    {% if response %}
+        {% if response %}
     <div>
         <h3>{{ response|safe }}</h3>
+
+        <h1>Recipe</h1>
+        <p>{{ recipe }}</p>
+    </div>
+{% endif %}
     </div>
 
-    <div>
-        <h1>Recipe</h1>
-        <p>{{ recipe|save }}</p>
-    </div>
-    {% endif %}
+
 </body>
 </html>
