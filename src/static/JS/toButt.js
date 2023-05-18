@@ -4,7 +4,7 @@ function toButt() {
 
          var formData = new FormData();
         formData.append('inputValue', inputValue);
-    fetch('reg/',{
+    fetch('',{
             method:'POST',
             body: formData})
         .then(response =>response.json())
