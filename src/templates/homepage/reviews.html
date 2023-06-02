@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+<!-- Підключення до Осн. шаблона -->
+{% load static %}
+<!-- !!!Не забувайте підгружати статік бо якщо цього не робити то CSS JAvaScript, Img просто не будуть працювати !!! -->
+
+<!-- Сюди лінки писати (навсяки запасні уточню) Це фактично є <head> -->
+
+    {% block additional_links %}
+        <link rel="stylesheet" type="text/css" href="{% static '/CSS/reviews.css' %}">
+    {% endblock %}
+
+<!-- Вважайти що це просто <body> бо посуті так і є -->
+{% block contend %}
+<div class="main_homepage row">
+    <h2 align="center">Залишайте відгук тут</h2>
+   <div class="input-name">
+       <from class="form-reviews">
+           <!-- A common form that includes input tags -->
+           <h4>Введіть ваше ім'я</h4>
+        <input align="center" type="text" name="first_name" /><br />
+           <h4>Ваш відгук </h4>
+        <input align="center" class="main_input" type="text" name="last_name" /><br />
+           <h4>Введіть вашу пошту</h4>
+        <input  type="email" name="user_email" /><br />
+
+        <input type="submit" value="Submit" />
+       </from>
+   </div>
+
+    <div class="input-reviews">
+
+    </div>
+
+    <div class="input-button">
+
+    </div>
+
+</div>
+{% endblock %}
