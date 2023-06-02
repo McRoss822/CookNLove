@@ -35,7 +35,5 @@ def generate_response(request):
 
         recipe_to_user = reciper["choices"][0]["text"]
 
-    return render(request, 'response.html', {'response': response_to_user, 'recipe': recipe_to_user})
+    return render(request, 'ai_response.html', {'response': response_to_user, 'recipe': recipe_to_user})
 
-def index(request):
-    return render(request, 'response.html')
