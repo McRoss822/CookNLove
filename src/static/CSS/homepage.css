@@ -1,0 +1,19 @@
+/*Це css для homepage.html*/
+.main_homepage{
+    /*Основний класс для homepage.html */
+
+}
+
+/* Бокові зображення */
+    .main_homepage .img_background{
+        /* Бокові зображення для homepage.html */
+
+    }
+
+/* CSS Контейнера */
+    .main_homepage .home_page_container .home_page_con .Square_rec{
+        background-color: darkgray;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 15px;
+    }

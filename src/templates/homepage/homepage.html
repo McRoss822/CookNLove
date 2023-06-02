@@ -1,6 +1,23 @@
-{% extends "layout.html" %}
+{% extends 'layout.html' %}
 
-{% block content %}
+<!-- Підключення до Осн. шаблона -->
+{% load static %}
+<!-- !!!Не забувайте підгружати статік бо якщо цього не робити то CSS JAvaScript, Img просто не будуть працювати !!! -->
+
+<!-- Сюди лінки писати (навсяки запасні уточню) Це фактично є <head> -->
+
+    {% block additional_links %}
+        <link rel="stylesheet" type="text/css" href="{% static '/CSS/homepage.css' %}">
+    {% endblock %}
+
+<!-- Вважайти що це просто <body> бо посуті так і є -->
+{% block contend %}
+<div class="main_homepage row">
+
+    <div class="img_background">
+        <!-- Це потрібно щоб збоку картинку можна було зробити адекватно та не надто розтягнутою
+         якщо є кращі ідеї прошу бо ця не дуже файна (Ще одна є нижче)-->
+    </div>
 
     <div class="home_page_container">
         <!-- .home_page_container є у своєму сss а не лейатівському
@@ -19,7 +36,6 @@
                     <h2>Страва</h2>
                 </div>
 
-                {% if response %}
                 <div class="col-6">
                     <div class="Square_rec ">
                     <!-- Cюди foto -->
@@ -33,7 +49,7 @@
                 <div class="Square_rec ">
                         <br>
                         <br>
-                    <p>{user_input} </p>
+                    <p>Інградієнти </p>
                         <br>
                         <br>
                 </div>
@@ -53,7 +69,6 @@
                 </div>
             </div>
 
-                {% endif %}
             </div>
 
 
@@ -64,4 +79,7 @@
 
     </div>
 
-{% endblock content %}
+    <div class="img_background"></div>
+
+</div>
+{% endblock %}
