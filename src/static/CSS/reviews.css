@@ -1,0 +1,30 @@
+.centered-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  width: 40%;
+
+}
+.reviews-input{
+  height: 40%;
+
+}
+  .reviews-input input{
+    height: 100%;
+  }
+.form-control {
+  width: 100%; /* Розтягуємо інпути на всю ширину форми */
+  max-width: 1000px; /* Задаємо максимальну ширину інпутів */
+  padding: 8px; /* Налаштовуємо внутрішній відступ для вигляду */
+}
+
+input {
+  border-radius: 5px;
+  margin-bottom: 10px; /* Додатковий відступ між інпутами */
+}

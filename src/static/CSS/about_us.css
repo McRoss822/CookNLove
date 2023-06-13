@@ -1,0 +1,17 @@
+.team_icon{
+    padding-top: 50px;
+    justify-content:center;
+    display:flex;
+}
+
+.content_about h1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.team_slot{
+}
+.team_slot img{
+    max-width: 80%;
+    border-radius: 20%;
+}
