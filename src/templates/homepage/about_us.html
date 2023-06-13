@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+
+<!-- Підключення до Осн. шаблона -->
+{% load static %}
+<!-- !!!Не забувайте підгружати статік бо якщо цього не робити то CSS JAvaScript, Img просто не будуть працювати !!! -->
+
+<!-- Сюди лінки писати (навсяки запасні уточню) Це фактично є <head> -->
+
+    {% block additional_links %}
+        <link rel="stylesheet" type="text/css" href="{% static '/CSS/about_us.css' %}">
+    {% endblock %}
+
+<!-- Вважайти що це просто <body> бо посуті так і є -->
+{% block contend %}
+<div class="main_homepage row">
+    <div class="col-2"><!-- Просто бокові пропуски -->   </div>
+
+    <div class="content_about col-8">
+        <h1>Наша команда</h1>
+
+        <div class="team_icon row">
+            <div class="col-4 team_slot">
+                <img src="{% static 'images/Break.jpg' %}" >
+                <h4>Імя</h4>
+                <h5>Роль: "Іжа"</h5>
+            </div>
+
+             <div class="col-4 team_slot">
+                 <img src="{% static 'images/Break.jpg' %}" >
+                 <h4>Імя</h4>
+                 <h5>Роль: "Іжа"</h5>
+            </div>
+
+             <div class="col-4 team_slot">
+                <img src="{% static 'images/Break.jpg' %}" >
+                <h4>Імя</h4>
+                <h5>Роль: "Іжа"</h5>
+            </div>
+
+             <div class="team_icon row">
+            <div class="col-4 team_slot">
+                <img src="{% static 'images/Break.jpg' %}" >
+                <h4>Імя</h4>
+                <h5>Роль: "Іжа"</h5>
+            </div>
+
+             <div class="col-4 team_slot">
+                 <img src="{% static 'images/Break.jpg' %}" >
+                 <h4>Імя</h4>
+                 <h5>Роль: "Іжа"</h5>
+            </div>
+
+             <div class="col-4 team_slot">
+                <img src="{% static 'images/Break.jpg' %}" >
+                <h4>Імя</h4>
+                <h5>Роль: "Іжа"</h5>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-2"><!-- Просто бокові пропуски -->    </div>
+</div>
+{% endblock %}
