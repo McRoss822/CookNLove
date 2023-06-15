@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+<!-- Підключення до Осн. шаблона -->
+{% load static %}
+<!-- !!!Не забувайте підгружати статік бо якщо цього не робити то CSS JAvaScript, Img просто не будуть працювати !!! -->
+
+<!-- Сюди лінки писати (навсяки запасні уточню) Це фактично є <head> -->
+
+    {% block additional_links %}
+        <link rel="stylesheet" type="text/css" href="{% static '/CSS/homepage.css' %}">
+    {% endblock %}
+
+<!-- Вважайти що це просто <body> бо посуті так і є -->
+{% block contend %}
+<div class="main_homepage row">
+
+    <div class="img_background">
+        <!-- Це потрібно щоб збоку картинку можна було зробити адекватно та не надто розтягнутою
+         якщо є кращі ідеї прошу бо ця не дуже файна (Ще одна є нижче)-->
+    </div>
+
+    <div class="home_page_container">
+        <!-- .home_page_container є у своєму сss а не лейатівському
+        Тому якщо будете робити ще шаблони створюйте по можливості до них свої css та підключайте не через links.html а
+        через block link тоді буде зрозуміло і не буде проблеми якщо класи будуть однаково називатися
+        -->
+        <!-- Пошуковець  -->
+     
+
+        <div class="row home_page_con">
+            <div class="col-2"></div>
+
+         <br>
+         <br>
+         <br>
+
+            <div class="col-8 row">
+                <div class="intro">
+                    <div class="container">
+                        <div class="intro_inner">
+                            <h1 class="intro_title">Any Recipe You Want! All the best just for you</h1>
+                            <h2 class="intro_addtitle">Write an Ingredient, Get a Recipe!</h2>
+                <div class="search-box">
+                    <input class="search-txt" type="text" name="" placeholder="Type to search">
+                    <a class="search-btn" href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+            </div>
+
+
+
+            <div class="col-2"></div>
+        </div>
+
+
+    </div>
+
+    <div class="img_background"></div>
+
+</div>
+{% endblock %}

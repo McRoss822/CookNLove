@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <div class="home_page_container">
+        <!-- .home_page_container є у своєму сss а не лейатівському
+        Тому якщо будете робити ще шаблони створюйте по можливості до них свої css та підключайте не через links.html а
+        через block link тоді буде зрозуміло і не буде проблеми якщо класи будуть однаково називатися
+        -->
+        <!-- Пошуковець  -->
+        <input class="search" type="search" name="input" value="Пошук">
+
+        <div class="row home_page_con">
+            <div class="col-2"></div>
+
+
+            <div class="col-8 row">
+                <div class="container-fluid">
+                    <h2>Страва</h2>
+                </div>
+
+                {% if response %}
+                <div class="col-6">
+                    <div class="Square_rec ">
+                    <!-- Cюди foto -->
+                        <br>
+                        <br>
+                    <p>Фото</p>
+                        <br>
+                        <br>
+                </div>
+
+                <div class="Square_rec ">
+                        <br>
+                        <br>
+                    <p>{user_input} </p>
+                        <br>
+                        <br>
+                </div>
+                </div>
+
+                <div class="col-6">
+                <div class="Square_rec ">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    <p>Інтеграл</p>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                </div>
+            </div>
+
+                {% endif %}
+            </div>
+
+
+
+            <div class="col-2"></div>
+        </div>
+
+
+    </div>
+
+{% endblock content %}
